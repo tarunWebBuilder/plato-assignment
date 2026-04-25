@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { CircleDollarSign, RefreshCw, SendHorizonal } from 'lucide-react';
 import './styles.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000').replace(/\/+$/, '');
 
 function formatINR(paise) {
   return new Intl.NumberFormat('en-IN', {
